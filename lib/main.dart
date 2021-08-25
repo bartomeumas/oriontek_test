@@ -33,7 +33,7 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   final List<Client> _clients = [];
   
-  void _addNewClient(String clientFirstName, String clientLastName, String clientCedula, String clientAddress1, clientAddress2, clientAddress3) {
+  void _addNewClient(String clientFirstName, String clientLastName, int clientCedula, String clientAddress1, clientAddress2, clientAddress3) {
     final newClient = Client(
       firstName: clientFirstName,
       lastName: clientLastName,

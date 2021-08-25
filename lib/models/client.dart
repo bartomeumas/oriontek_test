@@ -7,7 +7,7 @@ class Client {
   final String address1;
   final String address2;
   final String address3;
-  final String cedula;
+  final int cedula;
 
   Client({
     @required this.id,

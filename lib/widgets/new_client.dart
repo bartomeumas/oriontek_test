@@ -26,13 +26,13 @@ class _NewClientState extends State<NewClient> {
 
     final enteredFirstName = _firstNameController.text;
     final enteredLastName = _lastNameController.text;
-    final enteredCedula = _cedulaController.text;
+    final enteredCedula = int.parse(_cedulaController.text);
     final enteredAddress1 = _address1Controller.text;
     final enteredAddress2 = _address2Controller.text;
     final enteredAddress3 = _address3Controller.text;
    
 
-    if (enteredFirstName.isEmpty || enteredLastName.isEmpty || enteredCedula.isEmpty || enteredAddress1.isEmpty) {
+    if (enteredFirstName.isEmpty || enteredLastName.isEmpty ||  enteredCedula <= 0 || enteredAddress1.isEmpty) {
       return;
     }
 
@@ -73,6 +73,7 @@ class _NewClientState extends State<NewClient> {
                 decoration: InputDecoration(labelText: 'Cedula'),
                 controller: _cedulaController,
                 onSubmitted: (_) => _submitData(),
+                keyboardType: TextInputType.number,
               ),
               TextField(
                 decoration: InputDecoration(labelText: 'Address 1'),
