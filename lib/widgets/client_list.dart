@@ -14,12 +14,13 @@ class ClientList extends StatelessWidget {
           ? LayoutBuilder (builder: (ctx, constraints){
             return Column(
               children: <Widget>[
-                Text(
-                  'No clients added yet!',
-                  style: Theme.of(context).textTheme.headline3,
-                ),
-                SizedBox(
-                  height: 20,
+                Padding(
+                  padding: const EdgeInsets.all(6),
+                  child: Text(
+                    'No clients added yet!',
+                    style: Theme.of(context).textTheme.headline3,
+                    
+                  ),
                 ),
               ],
             );
