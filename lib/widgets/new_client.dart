@@ -5,7 +5,6 @@ import 'package:expand_widget/expand_widget.dart';
 
 class NewClient extends StatefulWidget {
   final Function addClient;
-
   NewClient(this.addClient);
 
   @override
@@ -51,6 +50,7 @@ class _NewClientState extends State<NewClient> {
 
   @override
   Widget build(BuildContext context) {
+    
     return SingleChildScrollView(
           child: Card(
         elevation: 5,
@@ -92,7 +92,7 @@ class _NewClientState extends State<NewClient> {
                 controller: _address3Controller,
                 onSubmitted: (_) => _submitData(),
               ),
-                  ],
+              ],
                 ),
               ),
               ElevatedButton(

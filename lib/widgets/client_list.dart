@@ -24,7 +24,6 @@ class ClientList extends StatelessWidget {
               ],
             );
           })
-          
           : ListView.builder(
               itemBuilder: (ctx, index) {
                 return Column(
@@ -63,20 +62,19 @@ class ClientList extends StatelessWidget {
                                     : Text(
                                       clients[index].address3.toString()),
                                     ],
-                                  
                                 ), 
-                                  trailing: MediaQuery.of(context).size.width > 360 ? //if the available is greater than 360 it renders flatbutton, else it renders iconbutton
+                                  trailing: MediaQuery.of(context).size.width > 360 ?
                                     TextButton.icon(icon: Icon(Icons.delete), label: Text('Delete') , onPressed: () => deleteClient(clients[index].id)) 
                                     : IconButton(
                                     icon: Icon(Icons.delete),
-                                    color: Theme.of(context).errorColor,
                                     onPressed: () => deleteClient(clients[index].id),
-                                    ),),
+                        ),
+                      ),
                     ),
                   ],
                 );
               },
               itemCount: clients.length,
             );
-  }
-}
+          }
+        }

@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Oriontek',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.red,
       ),
       home: MyHomePage(title: 'Oriontek'),
     );
@@ -64,8 +64,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
   void _deleteClient(String id) {
     setState(() {
-      _clients.removeWhere((tx) {
-        return tx.id == id;
+      _clients.removeWhere((client) {
+        return client.id == id;
       }); 
     });
   }
